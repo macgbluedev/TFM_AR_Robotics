@@ -1,0 +1,733 @@
+<?xml version="1.0" ?>
+<robot name="hoap3">
+  <link name="base_link"/>
+  <link name="CHEST">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/BODY_LINK01.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="3.26"/>
+      <origin xyz="-0.049489 0.000892912 -0.0408259"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/BODY_LINK01.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="H_PAN">
+    <visual>
+      <origin rpy="0.0 -0.0 1.57079632679" xyz="0.0 0.0 0.08"/>
+      <geometry>
+        <mesh filename="package://meshes/HEAD_LINK01.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="7.10e-02"/>
+      <origin xyz="0.00539731 -0.00158067 0.0564034"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 1.57079632679" xyz="0.0 0.0 0.08"/>
+      <geometry>
+        <mesh filename="package://meshes/HEAD_LINK01.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="H_TILT">
+    <intertial>
+      <mass value="0"/>
+      <origin xyz="0.0 0.0 0.0"/>
+    </intertial>
+  </link>
+  <link name="H_ROLL">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/HEAD_LINK02.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="4.12e-01"/>
+      <origin xyz="-0.00103952 -0.00517985 1.82267e-05"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/HEAD_LINK02.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="HEAD"/>
+  <link name="EYE"/>
+  <link name="REYE"/>
+  <link name="LEYE"/>
+  <link name="R_SFE">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK01.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.10e-01"/>
+      <origin xyz="8.28367e-05 0.00666808 0.00634824"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK01.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_SAA">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK02.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.34e-01"/>
+      <origin xyz="-0.00065756 -0.0463848 -0.00377395"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK02.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_SHR">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK03.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="1.965e-01"/>
+      <origin xyz="-0.00272189 -0.00160245 -0.00220452"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK03.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_EB">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK04.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.16e-01"/>
+      <origin xyz="0.00100237 0.0664225 -0.000615512"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK04.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_WR">
+    <visual>
+      <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK05.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RARM_LINK05.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_HAND">
+    <visual>
+      <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RHAND.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RHAND.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_SFE">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK01.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.10e-01"/>
+      <origin xyz="-3.64197e-05 0.00664174 -0.00634825"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK01.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_SAA">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK02.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.34e-01"/>
+      <origin xyz="0.000747218 -0.0463619 -0.00377403"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK02.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_SHR">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK03.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="1.965e-01"/>
+      <origin xyz="-0.00270991 0.00160227 -0.00209019"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK03.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_EB">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK04.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.16e-01"/>
+      <origin xyz="0.000962091 0.0664766 0.000558629"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK04.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_WR">
+    <visual>
+      <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK05.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LARM_LINK05.dae"/>
+      </geometry>
+    </collision>
+  </link>
+   <link name="L_HAND">
+    <visual>
+      <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LHAND.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LHAND.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_LR">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK01.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="5.87e-02"/>
+      <origin xyz="-0.003015 -0.0022399 0.0335846"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK01.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_LAA">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK02.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.10e-01"/>
+      <origin xyz="-0.00272697 0.00113482 0.0023778"/>
+    </intertial>
+     <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK02.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_LFE">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK03.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="5.19e-01"/>
+      <origin xyz="-0.0698208 0.00616508 -0.00326392"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK03.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_KN">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK04.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="3.28e-01"/>
+      <origin xyz="-0.0508521 0.00536785 -0.0046975"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK04.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_AFE">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK05.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="1.95e-01"/>
+      <origin xyz="0.00293669 0.00366853 -0.00133746"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK05.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_AAA">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK06.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="1.54e-01"/>
+      <origin xyz="-0.0292236 0.00324167 0.00827642"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/RLEG_LINK06.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="R_FOOT"/>
+  <link name="L_LR">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK01.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="5.87e-02"/>
+      <origin xyz="0.00300449 -0.00225088 0.0335846"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK01.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_LAA">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK02.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="2.10e-01"/>
+      <origin xyz="-0.00271179 -0.00124723 0.00238665"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK02.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_LFE">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK03.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="5.19e-01"/>
+      <origin xyz="-0.0699224 0.00627642 0.00331502"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK03.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_KN">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK04.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="3.28e-01"/>
+      <origin xyz="-0.0508386 0.00537031 0.00487773"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK04.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_AFE">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK05.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="1.95e-01"/>
+      <origin xyz="0.00292057 0.00369219 0.00119731"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK05.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_AAA">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK06.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="1.54e-01"/>
+      <origin xyz="-0.0292236 -0.0033462 0.00827642"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/LLEG_LINK06.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="L_FOOT"/>
+  <link name="WAIST">
+    <visual>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/BODY_LINK02.dae"/>
+      </geometry>
+    </visual>
+    <intertial>
+      <mass value="4.17e-01"/>
+      <origin xyz="-0.0322707 0.0111375 -0.000329172"/>
+    </intertial>
+    <collision>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://meshes/BODY_LINK02.dae"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_link_WAIST_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="WAIST"/>
+    <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="WAIST_CHEST_joint" type="revolute">
+    <parent link="WAIST"/>
+    <child link="CHEST"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="0.0" upper="0.610865238198" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="-0.0 0.0 0.0"/>
+  </joint>
+  <joint name="CHEST_H_PAN_joint" type="revolute">
+    <parent link="CHEST"/>
+    <child link="H_PAN"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.0471975512" upper="1.0471975512" velocity="100"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.035 0.0 0.125"/>
+  </joint>
+  <joint name="H_PAN_H_TILT_joint" type="revolute">
+    <parent link="H_PAN"/>
+    <child link="H_TILT"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="100" lower="-0.785398163397" upper="0.261799387799" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.015 0.0 0.103"/>
+  </joint>
+  <joint name="H_TILT_H_ROLL_joint" type="revolute">
+    <parent link="H_TILT"/>
+    <child link="H_ROLL"/>
+    <axis xyz="-1 0 0"/>
+    <limit effort="100" lower="-0.261799387799" upper="0.261799387799" velocity="100"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="H_ROLL_HEAD_joint" type="fixed">
+    <parent link="H_ROLL"/>
+    <child link="HEAD"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="0.0 -0.07 0.0"/>
+  </joint>
+  <joint name="H_ROLL_EYE_joint" type="fixed">
+    <parent link="H_ROLL"/>
+    <child link="EYE"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="0.06 0.004 0.0"/>
+  </joint>
+  <joint name="H_ROLL_REYE_joint" type="fixed">
+    <parent link="H_ROLL"/>
+    <child link="REYE"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="0.05 0.004 -0.03"/>
+  </joint>
+  <joint name="H_ROLL_LEYE_joint" type="fixed">
+    <parent link="H_ROLL"/>
+    <child link="LEYE"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="0.05 0.004 0.03"/>
+  </joint>
+  <joint name="CHEST_R_SFE_joint" type="revolute">
+    <parent link="CHEST"/>
+    <child link="R_SFE"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.57079632679" upper="2.44346095279" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="-0.035 -0.111 0.125"/>
+  </joint>
+  <joint name="R_SFE_R_SAA_joint" type="revolute">
+    <parent link="R_SFE"/>
+    <child link="R_SAA"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.57079632679" upper="0.0" velocity="100"/>
+    <origin rpy="1.57079632679 -1.57079632679 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="R_SAA_R_SHR_joint" type="revolute">
+    <parent link="R_SAA"/>
+    <child link="R_SHR"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.57079632679" upper="1.57079632679" velocity="100"/>
+    <origin rpy="1.57079632679 -1.57079632679 0.0" xyz="0.0 -0.111 0.0"/>
+  </joint>
+  <joint name="R_SHR_R_EB_joint" type="revolute">
+    <parent link="R_SHR"/>
+    <child link="R_EB"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-2.00712863979" upper="0.0" velocity="100"/>
+    <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="R_EB_R_WR_joint" type="revolute">
+    <parent link="R_EB"/>
+    <child link="R_WR"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.0471975512" upper="1.0471975512" velocity="100"/>
+    <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0478 0.0"/>
+  </joint>
+  <joint name="R_WR_R_HAND_joint" type="fixed">
+    <parent link="R_WR"/>
+    <child link="R_HAND"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.055"/>
+  </joint>
+  <joint name="CHEST_L_SFE_joint" type="revolute">
+    <parent link="CHEST"/>
+    <child link="L_SFE"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.57079632679" upper="2.44346095279" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="-0.035 0.111 0.125"/>
+  </joint>
+  <joint name="L_SFE_L_SAA_joint" type="revolute">
+    <parent link="L_SFE"/>
+    <child link="L_SAA"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0.0" upper="1.57079632679" velocity="100"/>
+    <origin rpy="1.57079632679 -1.57079632679 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="L_SAA_L_SHR_joint" type="revolute">
+    <parent link="L_SAA"/>
+    <child link="L_SHR"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.58824961931" upper="1.58824961931" velocity="100"/>
+    <origin rpy="1.57079632679 -1.57079632679 0.0" xyz="0.0 -0.111 0.0"/>
+  </joint>
+  <joint name="L_SHR_L_EB_joint" type="revolute">
+    <parent link="L_SHR"/>
+    <child link="L_EB"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-2.00712863979" upper="0.0" velocity="100"/>
+    <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="L_EB_L_WR_joint" type="revolute">
+    <parent link="L_EB"/>
+    <child link="L_WR"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.57079632679" upper="1.57079632679" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0478 0.0"/>
+  </joint>
+  <joint name="L_WR_L_HAND_joint" type="fixed">
+    <parent link="L_WR"/>
+    <child link="L_HAND"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.055"/>
+  </joint>
+  <joint name="WAIST_R_LR_joint" type="revolute">
+    <parent link="WAIST"/>
+    <child link="R_LR"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.57079632679" upper="0.523598775598" velocity="100"/>
+    <origin rpy="-1.57079632679 1.57079632679 0.0" xyz="-0.035 -0.055 0.039"/>
+  </joint>
+  <joint name="R_LR_R_LAA_joint" type="revolute">
+    <parent link="R_LR"/>
+    <child link="R_LAA"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-0.523598775598" upper="0.349065850399" velocity="100"/>
+    <origin rpy="1.57079632679 -1.57079632679 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="R_LAA_R_LFE_joint" type="revolute">
+    <parent link="R_LAA"/>
+    <child link="R_LFE"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.3962634016" upper="1.2217304764" velocity="100"/>
+    <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="R_LFE_R_KN_joint" type="revolute">
+    <parent link="R_LFE"/>
+    <child link="R_KN"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0.0872664625997" upper="2.26892802759" velocity="100"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.105 0.0 0.0"/>
+  </joint>
+  <joint name="R_KN_R_AFE_joint" type="revolute">
+    <parent link="R_KN"/>
+    <child link="R_AFE"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.0471975512" upper="1.0471975512" velocity="100"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.105 0.0 0.0"/>
+  </joint>
+  <joint name="R_AFE_R_AAA_joint" type="revolute">
+    <parent link="R_AFE"/>
+    <child link="R_AAA"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-0.436332312999" upper="0.436332312999" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="R_AAA_R_FOOT_joint" type="fixed">
+    <parent link="R_AAA"/>
+    <child link="R_FOOT"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.04 0.005 0.014"/>
+  </joint>
+  <joint name="WAIST_L_LR_joint" type="revolute">
+    <parent link="WAIST"/>
+    <child link="L_LR"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-0.523598775598" upper="1.57079632679" velocity="100"/>
+    <origin rpy="-1.57079632679 1.57079632679 0.0" xyz="-0.035 -0.055 -0.039"/>
+  </joint>
+  <joint name="L_LR_L_LAA_joint" type="revolute">
+    <parent link="L_LR"/>
+    <child link="L_LAA"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-0.349065850399" upper="0.523598775598" velocity="100"/>
+    <origin rpy="1.57079632679 -1.57079632679 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="L_LAA_L_LFE_joint" type="revolute">
+    <parent link="L_LAA"/>
+    <child link="L_LFE"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.3962634016" upper="1.2217304764" velocity="100"/>
+    <origin rpy="1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="L_LFE_L_KN_joint" type="revolute">
+    <parent link="L_LFE"/>
+    <child link="L_KN"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="0.0872664625997" upper="2.26892802759" velocity="100"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.105 0.0 0.0"/>
+  </joint>
+  <joint name="L_KN_L_AFE_joint" type="revolute">
+    <parent link="L_KN"/>
+    <child link="L_AFE"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-1.0471975512" upper="1.0471975512" velocity="100"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.105 0.0 0.0"/>
+  </joint>
+  <joint name="L_AFE_L_AAA_joint" type="revolute">
+    <parent link="L_AFE"/>
+    <child link="L_AAA"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="100" lower="-0.436332312999" upper="0.436332312999" velocity="100"/>
+    <origin rpy="-1.57079632679 -0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="L_AAA_L_FOOT_joint" type="fixed">
+    <parent link="L_AAA"/>
+    <child link="L_FOOT"/>
+    <origin rpy="0.0 -0.0 0.0" xyz="-0.04 -0.005 0.014"/>
+  </joint>
+</robot>
+
